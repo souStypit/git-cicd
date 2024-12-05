@@ -1,4 +1,4 @@
-from main import factorial, del_nan_vals, gauss
+from src import factorial, del_nan_vals, gauss
 import math
 
 
