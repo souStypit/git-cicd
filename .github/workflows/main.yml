@@ -26,14 +26,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # - name: Setup Python
-        # uses: actions/setup-python@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
 
-      # - name: Install dependencies
-      #   run: |
-      #     python -m pip install --upgrade pip
-      #     pip install black
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # pip install black
 
-      # - name: Run tests
-      #   run: |
-      #     python -m black
+      - name: Run tests
+        run: |
+          # python -m black
+          python test.py
