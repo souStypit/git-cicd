@@ -36,5 +36,5 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m black
+          python -m black .
           python test.py
