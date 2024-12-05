@@ -36,5 +36,8 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m black
+          python -m black .
           python test.py
+          if [ $? -ne 0 ]; then
+            exit 1
+          fi
