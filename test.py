@@ -7,7 +7,9 @@ def tests():
         assert math.factorial(12) == factorial(12)
         assert math.factorial(15) == factorial(15)
     except AssertionError as ae:
+        print('Tests are failed')
         return 1
+    print('Tests are completed')
     return 0
 def main():
     return tests()
