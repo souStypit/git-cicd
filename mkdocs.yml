@@ -1,0 +1,16 @@
+site_name: souStypit
+site_url: https://souStypit.github.io/git-cicd
+site_author: <you name>
+
+# Repository
+repo_name: git-cicd
+repo_url: https://github.com/souStypit/git-cicd
+edit_uri: edit/master/docs
+docs_dir: docs
+
+plugins:
+    - awesome-pages
+    - search
+
+theme:
+  name: readthedocs
