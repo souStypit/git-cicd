@@ -18,10 +18,25 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: [ubuntu-latest, windows-latest]
+    strategy:
+      matrix:
+        python-version: ['3.9', '3.10', '3.11', '3.12']
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install black
+
+      - name: Run tests
+        run: |
+          python -m black
