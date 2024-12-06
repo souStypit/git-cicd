@@ -47,5 +47,5 @@ jobs:
       - name: Create documentation
         run: |
           cd /docs
-          sphinx-apidoc -f -o ./ ../
+          sphinx-apidoc -f -o ./docs ./
           make html
