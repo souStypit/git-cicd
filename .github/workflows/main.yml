@@ -57,6 +57,5 @@ jobs:
           destination_dir: ./${{ github.ref_name }}
           force_orphan: false
           keep_files: true
-          personal_token: ${{ secrets.DEPLOY_TOKEN }}
-          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/_build/
