@@ -34,6 +34,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install numpy
           pip install black
+          pip install sphinx
 
       - name: Run tests
         run: |
@@ -42,3 +43,9 @@ jobs:
           if [ $? -ne 0 ]; then
             exit 1
           fi
+
+      - name: Create documentation
+        run: |
+          cd /docs
+          sphinx-apidoc -f -o ./ ../
+          make html
