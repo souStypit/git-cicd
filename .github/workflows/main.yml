@@ -49,3 +49,9 @@ jobs:
           sphinx-apidoc -f -o ./ ../
           make html
         working-directory: ./docs
+
+      - name: Deploy documentation
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
