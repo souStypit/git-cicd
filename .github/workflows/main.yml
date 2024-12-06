@@ -55,5 +55,4 @@ jobs:
         with:
           allow_empty_commit: true
           github_token: ${{ secrets.GITHUB_TOKEN }}}
-          publish_branch: gh-pages
           publish_dir: docs/_build/
