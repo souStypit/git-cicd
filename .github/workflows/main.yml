@@ -55,4 +55,5 @@ jobs:
         with:
           allow_empty_commit: true
           github_token: ${{ secrets.GITHUB_TOKEN }}}
+          personal_token: ${{ secrets.DEPLOY_TOKEN }}
           publish_dir: docs/_build/
