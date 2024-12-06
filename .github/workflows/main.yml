@@ -56,8 +56,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           allow_empty_commit: true
-          destination_dir: ./${{ github.ref_name }}
-          force_orphan: false
           keep_files: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/_build/
